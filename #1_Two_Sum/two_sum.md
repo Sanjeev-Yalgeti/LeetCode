@@ -70,5 +70,5 @@ Instead of checking every pair (O(n²)), we store previously seen numbers and di
 
 ## 🖼️ Proof
 
-![alt text](two_sum.png)
+![alt text](Two_sum.png)
 
