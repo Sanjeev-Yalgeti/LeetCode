@@ -24,25 +24,22 @@ public:
         while(!order.empty())
         {
             int queueSize=order.size();
-            if(!queueSize)
-            {
-                break;
-            };
-            int currLevel[]={};
+           
+            vector<int> currLevel;
             while(queueSize)
             {
-                int curr=order.front()->val;
-                currLevel.push(curr);
+                TreeNode* curr=order.front();
+                currLevel.push_back(curr->val);
                 if(curr->left)
                 {
-                    currLevel.push(curr->left);
-
+                order.push(curr->left);
                 }
                 if(curr->right)
                 {
-                    currLevel.push(curr->right);
+                order.push(curr->right);
                 }
                 queueSize--;
+                order.pop();
             }
             result.push_back(currLevel);
         }
